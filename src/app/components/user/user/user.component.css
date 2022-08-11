@@ -1,0 +1,61 @@
+.row{
+    height: 36.5rem;
+    width: auto;
+}
+
+.column-left {
+    background-color: aqua;
+    width: 40%;
+}
+
+img.logo {
+    width:150px;
+    height:150px;
+  }
+
+.app-logo{
+    margin-top: 30%;
+    text-align: center;
+    text-align: center;
+    font-size: 20px;
+    font-family: inherit;
+}
+
+.column-right{
+    width: 60%;
+    margin-top: 50px;
+    margin-bottom: 50PX;
+}
+
+.username-form{
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    width: 350px;
+}
+
+.about-form{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    width: 350px;
+}
+
+#aboutInput{
+    padding-bottom: 80px
+}
+
+.button{
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+    border-radius: 5px;
+    width: 350px;
+    background-color: aqua;
+    text-align: center;
+    font-size: 18px;
+    outline-color: aqua;
+}
