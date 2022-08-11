@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
 import { User } from 'src/app/models/user.model'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { User } from 'src/app/models/user.model';
 export class UserComponent implements OnInit {
   title = 'profileApplicationClient';
 
-  constructor(private userService: UsersService){
+  constructor(private userService: UsersService, private router: Router){
   }
 
   users: User[] = []
@@ -52,6 +53,6 @@ export class UserComponent implements OnInit {
   }
 
   next(){
-    console.log("Clicked")
+    this.router.navigate(['/projects'], {state : {data: this.user.projectId}});
   }
 }

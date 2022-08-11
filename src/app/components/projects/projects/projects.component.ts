@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Project } from 'src/app/models/project.model';
 import { ProjectsService } from 'src/app/services/projects.service';
 
@@ -15,17 +15,17 @@ export class ProjectsComponent implements OnInit {
   projects: Project[] = []
   project: Project = {
     id: "0",
-    projectId: "",
+    projectId: history.state.data,
     projectName: "",
     projectDescription: ""
   };
 
   ngOnInit(): void {
-    this.getProjects();
+    console.log(this.project.projectId);
   }
 
   getProjects(){
-    this.projectService.getProjects("jeff")
+    this.projectService.getProjects(this.project.projectId)
     .subscribe(
       response =>{
         console.log(response);
@@ -40,5 +40,9 @@ export class ProjectsComponent implements OnInit {
         console.log(response)
       }
     )
+  }
+
+  next(){
+    
   }
 }
